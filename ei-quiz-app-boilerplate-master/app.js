@@ -159,8 +159,6 @@ nextQuestion();
 
 
 function nextQuestion() {
-// $('#question').append(`<h2 id="acc-question">${randQuestion.question}?</h2>`)
-// quiz[questionNunmber].answer.forEach
 quiz[questionNumber].answers.forEach(answer => {
  const button = $('#answer-buttons').append(`
  <form>
@@ -177,9 +175,6 @@ addBtnClassName();
 function addBtnClassName (){ 
   const answerButtons = document.getElementById('answer-buttons');
   let answerButtonChildren = Array.from(answerButtons.children);
-  // answerButtonChildren.forEach(button => {
-  //   button.classList.add('btn-submit'); 
-  // });
 }
 
 function showNextButton() {
@@ -228,7 +223,6 @@ function renderFalseTemplate() {
 
 function renderResultsPage() {
   let finalPercentage = handleFinalScore();
-  // $('#acc-question').remove()
   $('.tof-header').addClass('hide');
 $('#next-question-btn').addClass('hide');
 $('.answer-gif').addClass('hide');
@@ -252,13 +246,11 @@ function updateScore() {
 }
 
 
-
-//Buttons to do 
+ 
 function handleStartButton() {
   $('#start-btn').on('click', startQuiz);
   }
 
-  //figure how to have submit button check answer not run correctTemplate
   function handleSubmitButton() {
     $('#next-btn').on('click', checkAnswer)
   }
@@ -301,7 +293,7 @@ function handleStartButton() {
   }
 
 
-  // Need a function to check if the user hit next on the last question and pull up the results 
+ 
 
 
 
@@ -317,8 +309,3 @@ function handleStartButton() {
 $(renderQuiz);
 
 
-//fix the next button
-//youre doing good
-
-
-//instead of randQeusiton have the questionNumber act as an incremental index for the quiz array 
